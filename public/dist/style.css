@@ -1,0 +1,130 @@
+@charset "utf-8";
+body { 
+line-height:160%;
+margin: 0px;
+background-color: #FFFFDD;
+background-image:url(/dist/indextop.png);
+background-repeat:repeat-x;
+font-family:tahoma, 微軟正黑體, Microsoft JhengHei;
+}
+.button_red {
+font-size:16px;
+text-align:center;
+background: #FF4433;
+border-radius:3px;
+border:none;
+padding:12px 48px;
+cursor:pointer;
+}
+.button_red:hover {
+background: #FF6633;
+}
+.button_red:active {
+background: #FF6633;
+}
+a:link {
+text-decoration: none;
+}
+a:visited {
+text-decoration: none;
+}
+a:hover {
+text-decoration: none;
+}
+.font_black {
+color: #663300;
+}
+.font_black a:link {
+color: #FF4433;
+}
+.font_black a:visited {
+color: #FF4433;
+}
+.font_black a:hover {
+color: #FF6633;
+}
+.font_red {
+color: #FF4433;
+}
+.font_red a:link {
+color: #FF4433;
+}
+.font_red a:visited {
+color: #FF4433;
+}
+.font_red a:hover {
+color: #FF6633;
+}
+.font_white {
+color: #FFFFFF;
+}
+.font_white a:link {
+color: #FFFFFF;
+}
+.font_white a:visited {
+color: #FFFFFF;
+}
+.font_white a:hover {
+color: #FFFFFF;
+}
+select {
+color: #555555;
+font-size:13px;
+border: 1px solid #DDDDDD;
+background-color: #FFFFFF;
+padding: 5px;
+}
+select:hover {
+border: 1px solid #FF4433;
+}
+input[type=text],input[type=password] {
+color: #555555;
+font-size: 15px;
+border: 1px solid #DDDDDD;
+background-color: #FEFEFE;
+padding-left:10px;
+line-height:32px;
+}
+input[type=text]:hover,input[type=password]:hover {
+border: 1px solid #FF4433;
+background-color: #FFFFFF;
+}
+input[type=file] {
+color: #555555;
+font-size: 13px;
+border: 1px solid #DDDDDD;
+background-color: #FEFEFE;
+padding: 5px;
+margin: 0px;
+}
+input[type=file]:hover {
+border: 1px solid #FF4433;
+background-color: #FFFFFF;
+}
+::-ms-browse {
+color: #555555;
+border: 0;
+border: 1px solid #FEFEFE;
+background-color: #DDDDDD;
+}
+::-ms-browse:hover {
+border: 1px solid #FF4433;
+background-color: #FFFFFF;
+}
+textarea {
+color: #555555;
+font-size: 15px;
+border: 1px solid #DDDDDD;
+background-color: #FEFEFE;
+}
+textarea:hover {
+border: 1px solid #FF4433;
+background-color: #FFFFFF;
+}
+.img_hover:hover {
+opacity: 0.8;
+filter: alpha(opacity=80);
+}
+.hand:hover {
+cursor:pointer;
+}
