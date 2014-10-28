@@ -6,20 +6,24 @@ var mongoose = require('mongoose'),
 var ThreadSchema = new Schema({
 	thread_id: {
 		type: Number,
-		default: Date.now()
+		default: Date.now(),
+		index: true
 	},
 	title: {
 		type: String,
 		default: '',
-		required: 'Title cannot be blank'
+		required: 'Title cannot be blank',
+		index: false
 	},
 	url: {
 		type: String,
-		default: ''
+		default: '',
+		index: false
 	},
 	status: {
 		type: Number,
-		default: 10
+		default: 10,
+		index: false
 	}
 }, {collection: 'threads'});
 

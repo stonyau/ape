@@ -6,14 +6,25 @@ background-color: #FFFFDD;
 background-image:url(/dist/indextop.png);
 background-repeat:repeat-x;
 font-family:tahoma, 微軟正黑體, Microsoft JhengHei;
+color: #663300;
+font-size:15px;
+}
+a:link {
+color: #FF4433;
+}
+a:visited {
+color: #FF4433;
+}
+a:hover {
+color: #FF6633;
 }
 .button_red {
-font-size:16px;
+font-size:15px;
 text-align:center;
 background: #FF4433;
 border-radius:3px;
 border:none;
-padding:12px 48px;
+padding:10px 30px;
 cursor:pointer;
 }
 .button_red:hover {
@@ -30,18 +41,6 @@ text-decoration: none;
 }
 a:hover {
 text-decoration: none;
-}
-.font_black {
-color: #663300;
-}
-.font_black a:link {
-color: #FF4433;
-}
-.font_black a:visited {
-color: #FF4433;
-}
-.font_black a:hover {
-color: #FF6633;
 }
 .font_red {
 color: #FF4433;

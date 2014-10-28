@@ -3,7 +3,12 @@
 module.exports = function(app) {
 	// Root routing
 	var core = require('../../app/controllers/core');
-	app.route('/').get(core.index);
+	app.route('/').get(core.getIndex);
 	app.route('/cms_login').post(core.CMSLogin);
-	app.route('/cms_insert').post(core.CMSInsert);
+	
+	app.route('/threads').get(core.CMSList);
+	app.route('/threads').post(core.CMSInsert);
+	
+	app.route('/threads/:thread_id').get(core.getContent);
+	app.route('/threads/:thread_id').delete(core.CMSDelete);
 };

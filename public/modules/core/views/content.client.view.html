@@ -1,0 +1,16 @@
+<section data-ng-controller="HomeController" data-ng-init="getContent()">
+<div style="position:relative; width:100%;" align="center">
+<img ng-if="thread.status==10" ng-src="http://i.imgur.com/{{thread.url}}.jpg" style="border: 1px solid #DDDDDD; background-color:#FFFFFF; padding:8px; max-width:960px;" />
+
+<div style="width:600px; margin:20px 0px 40px 0px; font-size:16px; line-height:175%;" class="font_black" align="center">
+<div ng-if="next_thread==1 && thread.status!=10" style="font-size:20px;">啊，找不到更多圖片了！/_\</div>
+<div data-ng-bind="thread.title"></div>
+</div>
+
+<div class="font_white">
+<a href="http://thefunnyape.com" class="button_red" style="margin:10px; line-height:300%;">回到首頁</a>
+<a ng-if="thread.status==10" href="/#!/content/{{thread.thread_id}}?next_content=1" class="button_red" style="margin:10px; line-height:300%;">下一張搞笑圖片</a>
+</div>
+</div>
+
+</section>

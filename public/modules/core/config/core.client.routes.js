@@ -12,6 +12,10 @@ angular.module('core', ['ngCookies']).config(['$stateProvider', '$urlRouterProvi
 			url: '/',
 			templateUrl: 'modules/core/views/home.client.view.html'
 		}).
+		state('content', {
+			url: '/content/:thread_id',
+			templateUrl: 'modules/core/views/content.client.view.html'
+		}).
 		state('privacy', {
 			url: '/privacy',
 			templateUrl: 'modules/core/views/privacy.client.view.html'
@@ -19,6 +23,10 @@ angular.module('core', ['ngCookies']).config(['$stateProvider', '$urlRouterProvi
 		state('cms', {
 			url: '/cms',
 			templateUrl: 'modules/core/views/cms.client.view.html'
+		}).
+		state('cms_list', {
+			url: '/cms_list',
+			templateUrl: 'modules/core/views/cms_list.client.view.html'
 		}).
 		state('cms_insert', {
 			url: '/cms_insert',

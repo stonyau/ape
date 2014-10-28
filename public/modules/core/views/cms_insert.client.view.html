@@ -1,11 +1,14 @@
 <section data-ng-controller="CMSController">
 <div style="padding-top:30px;">
+<div style="height:60px;" class="font_white" align="center">
+<a href="/#!/cms_list" class="button_red" style="line-height:300%;">回到內容列表</a>
+</div>
 <form data-ng-submit="insert()" autocomplete="off">
 <div style="height:30px;">標題</div>
 <div style="height:60px;"><input type="text" id="title" style="width:600px; height:35px; line-height:35px;" data-ng-model="title"></div>
 <div style="height:30px;">Imgur 連結</div>
 <div style="height:60px;"><input type="text" id="url" style="width:300px; height:35px; line-height:35px;" data-ng-model="url"></div>
-<div style="height:60px;"><input type="submit" value="插入" class="button_red font_white" style="font-size:16px;"></div>
+<div style="height:60px;"><input type="submit" value="加入" class="button_red font_white" style="font-size:16px;"></div>
 </form>
 </div>
 </section>

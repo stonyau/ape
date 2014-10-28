@@ -1,9 +1,19 @@
 <section data-ng-controller="CMSController" data-ng-init="list()">
-<div style="padding-top:30px;">
-<div data-ng-repeat="thread in threads">
-{{thread.title}}
+<div style="padding-top:30px; width:900px;">
+<div style="height:60px;" class="font_white" align="right">
+<a href="/#!/cms_insert" class="button_red" style="margin-right:10px; line-height:300%;">加入新內容</a>
+<a href="" ng-click="logout();" class="button_red" style="line-height:300%;">登出</a>
 </div>
-<table width="600" cellspacing="10" id="table">
+<table width="900" id="table" border="1" cellpadding="10" frame="void" rules="rows">
+<th align="left">標題</th><th align="left">Imgur URL</th><th align="left">插入時間</th><th align="left">狀態</th>
+<tr ng-repeat="thread in threads">
+<td>{{thread.title}}</td>
+<td>{{thread.url}}</td>
+<td>{{thread.thread_id | date:'MM/dd/yyyy H:mm'}}</td>
+<td ng-if="thread.status==10">正常</td>
+<td ng-if="thread.status==20">己移除</td>
+<td><a href="" ng-click="delete(thread.thread_id);thread.status=20;" ng-show="thread.status == 10">從首頁移除</a></td>
+</tr>
 </table>
 </div>
 </section>
