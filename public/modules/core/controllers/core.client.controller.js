@@ -3,16 +3,16 @@
 angular.module('core').controller('HomeController', ['$scope', '$stateParams', '$location', 'Thread',
 	function($scope, $stateParams, $location, Thread) {
 		$scope.getContent = function() {
-			if($location.search().next_content > 0) {
-				$scope.thread = Thread.get({
-					thread_id: $stateParams.thread_id,
-					next_content: 1
-				});
-			} else {
-				$scope.thread = Thread.get({
-					thread_id: $stateParams.thread_id
-				});
-			}
+			$scope.thread = Thread.get({
+				thread_id: $stateParams.thread_id
+			});
+		};
+		$scope.nextContent = function(_thread_id) {
+			$scope.next_content = 1;
+			$scope.thread = Thread.get({
+				thread_id: _thread_id,
+				next_content: 1
+			});
 		};
 	}
 ]);

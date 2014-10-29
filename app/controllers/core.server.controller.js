@@ -99,7 +99,7 @@ exports.CMSDelete = function(req, res) {
 		}
 	});
 	*/
-	Thread.find({_id:req.params.thread_id}).remove().exec(function(err, threads) {
+	Thread.find({thread_id:req.params.thread_id}).remove().exec(function(err, threads) {
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)

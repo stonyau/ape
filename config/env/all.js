@@ -2,11 +2,11 @@
 
 module.exports = {
 	app: {
-		title: 'MEAN.JS',
-		description: 'Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js',
-		keywords: 'mongodb, express, angularjs, node.js, mongoose'
+		title: '搞笑猩猩',
+		description: '專注搞笑一百年',
+		keywords: '搞笑'
 	},
-	db: 'mongodb://localhost/thefunnyape',
+	db: 'mongodb://localhost/mean',
         port: 80,
 	templateEngine: 'swig',
 	sessionSecret: 'MEAN',

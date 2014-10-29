@@ -8,6 +8,15 @@ background-repeat:repeat-x;
 font-family:tahoma, 微軟正黑體, Microsoft JhengHei;
 color: #663300;
 font-size:15px;
+-webkit-animation: slide 100s linear infinite;
+}
+@-webkit-keyframes slide {
+	from{
+	background-position:10000px 0px;
+	}
+	to{
+	background-position:0px 0px;
+	}
 }
 a:link {
 color: #FF4433;

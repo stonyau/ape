@@ -5,8 +5,9 @@
 <a href="" ng-click="logout();" class="button_red" style="line-height:300%;">登出</a>
 </div>
 <table width="900" id="table" border="1" cellpadding="10" frame="void" rules="rows">
-<th align="left">標題</th><th align="left">Imgur URL</th><th align="left">插入時間</th><th align="left">狀態</th>
+<th align="left">ID</th><th align="left">標題</th><th align="left">Imgur URL</th><th align="left">插入時間</th><th align="left">狀態</th>
 <tr ng-repeat="thread in threads">
+<td>{{thread.thread_id}}</td>
 <td>{{thread.title}}</td>
 <td>{{thread.url}}</td>
 <td>{{thread.thread_id | date:'MM/dd/yyyy H:mm'}}</td>
