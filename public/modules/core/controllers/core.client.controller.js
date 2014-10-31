@@ -1,6 +1,30 @@
 'use strict';
 
-angular.module('core').controller('HomeController', ['$scope', '$stateParams', '$location', 'Thread',
+angular.module('core').controller('HomeController', ['$scope', 'Thread',
+	function($scope, Thread) {
+		$scope.threads = [];
+		$scope.content_factor = 9;
+		$scope.start_limit = 0;
+		$scope.no_more_content = false;
+		
+		$scope.loadContent = function() {
+			if(!$scope.no_more_content) {
+				Thread.query({
+					start_limit: $scope.start_limit
+				}, function(result) {console.log(result.length);
+					if(result.length < $scope.content_factor) {
+						$scope.no_more_content = true;
+					} else {
+						$scope.start_limit += $scope.content_factor;
+					}
+					$scope.threads.push.apply($scope.threads, result);
+				});
+			}
+		};
+	}
+]);
+
+angular.module('core').controller('ContentController', ['$scope', '$stateParams', '$location', 'Thread',
 	function($scope, $stateParams, $location, Thread) {
 		$scope.getContent = function() {
 			$scope.thread = Thread.get({
@@ -30,7 +54,8 @@ angular.module('core').controller('CMSController', ['$scope', '$http', '$cookies
 		$scope.insert = function() {
 			var thread = new Thread({
 				title: this.title,
-				url: this.url
+				url: this.url,
+				thread_id: Date.now()
 			});
 			thread.$save(function(response) {
 				$location.path('/cms_list');

@@ -136,3 +136,23 @@ filter: alpha(opacity=80);
 .hand:hover {
 cursor:pointer;
 }
+@media (max-width: 1200px){
+.deckgrid {width:900px;}
+.deckgrid[deckgrid]::before {content: '3 .column';}
+}
+@media (min-width: 1200px) and (max-width: 1500px){
+.deckgrid {width:1200px;}
+.deckgrid[deckgrid]::before {content: '4 .column';}
+}
+@media (min-width: 1500px){
+.deckgrid {width:1500px;}
+.deckgrid[deckgrid]::before {content: '5 .column';}
+}
+.deckgrid[deckgrid]::before {
+font-size: 0;
+visibility: hidden;
+}
+.deckgrid .column {
+float: left;
+width: 300px;
+}

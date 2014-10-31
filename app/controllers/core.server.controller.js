@@ -72,7 +72,7 @@ exports.CMSList = function(req, res) {
 		return;
 	}
 	
-	Thread.find().sort('-thread_id').limit(30).exec(function(err, threads) {
+	Thread.find().sort('-thread_id').skip(req.param('start_limit')).limit(9).exec(function(err, threads) {
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)

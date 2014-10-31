@@ -6,7 +6,6 @@ var mongoose = require('mongoose'),
 var ThreadSchema = new Schema({
 	thread_id: {
 		type: Number,
-		default: Date.now(),
 		index: true
 	},
 	title: {

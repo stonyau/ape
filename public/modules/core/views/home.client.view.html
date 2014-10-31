@@ -1,5 +1,7 @@
 <section data-ng-controller="HomeController">
-<div style="position:relative; width:100%; display:inline-block; padding-top:30px;" align="center" id="main">
-<ul style="list-style:none;" align="center" id="containier"></ul>
+<div style="width:100%; padding-top:30px;" align="center">
+<div deckgrid source="threads" cardTemplate="/modules/core/views/home_column.client.view.html" class="deckgrid"></div>
+<div style="clear:both"></div>
 </div>
+<div in-view="loadContent()" style="height:10px;"></div>
 </section>

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('core', ['ngCookies']).config(['$stateProvider', '$urlRouterProvider',
+angular.module('core', ['ngCookies', 'akoenig.deckgrid', 'angular-inview']).config(['$stateProvider', '$urlRouterProvider',
 	function($stateProvider, $urlRouterProvider) {
 		$urlRouterProvider.otherwise('/');
 
