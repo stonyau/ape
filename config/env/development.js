@@ -3,18 +3,19 @@
 module.exports = {
 	assets: {
                 lib: {
-                        css: [
-                        ],
                         js: [
                                 'public/lib/angular/angular.js',
                                 'public/lib/angular-resource/angular-resource.js',
                                 'public/lib/angular-animate/angular-animate.js',
                                 'public/lib/angular-ui-router/release/angular-ui-router.js',
-                                'public/lib/angular-ui-utils/ui-utils.js'
-                        ]
+                                'public/lib/angular-ui-utils/ui-utils.js',
+								'public/lib/angular-cookies/angular-cookies.js',
+								'public/lib/angular-deckgrid/angular-deckgrid.js',
+								'public/dist/angular-inview.js'
+						]
                 },
                 css: [
-                        'public/dist/*.css'
+                        'public/dist/style.css'
                 ],
                 js: [
                         'public/config.js',

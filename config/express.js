@@ -33,11 +33,11 @@ module.exports = function(db) {
 	app.locals.description = config.app.description;
 	app.locals.keywords = config.app.keywords;
 	app.locals.jsFiles = config.getJavaScriptAssets();
-	app.locals.cssFiles = config.getCSSAssets();
 
 	// Passing the request url to environment locals
 	app.use(function(req, res, next) {
 		res.locals.url = req.protocol + '://' + req.headers.host + req.url;
+		app.locals.thisSite = req.headers.host;
 		next();
 	});
 

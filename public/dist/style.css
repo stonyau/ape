@@ -35,6 +35,7 @@ border-radius:3px;
 border:none;
 padding:10px 30px;
 cursor:pointer;
+white-space:nowrap;
 }
 .button_red:hover {
 background: #FF6633;
@@ -136,7 +137,15 @@ filter: alpha(opacity=80);
 .hand:hover {
 cursor:pointer;
 }
-@media (max-width: 1200px){
+@media (max-width: 600px){
+.deckgrid {width:300px;}
+.deckgrid[deckgrid]::before {content: '1 .column';}
+}
+@media (min-width: 600px) and (max-width: 900px){
+.deckgrid {width:600px;}
+.deckgrid[deckgrid]::before {content: '2 .column';}
+}
+@media (min-width: 900px) and (max-width: 1200px){
 .deckgrid {width:900px;}
 .deckgrid[deckgrid]::before {content: '3 .column';}
 }
